@@ -1,0 +1,353 @@
+.386
+.model flat, stdcall
+option casemap :none   ; case sensitive
+ 
+include \masm32\include\windows.inc
+include \masm32\include\user32.inc
+include \masm32\include\kernel32.inc
+include \masm32\include\gdi32.inc
+ 
+CLSMENUNAME STRUCT
+    ANSIPtr DWORD ?
+    WIDEPtr DWORD ?
+    UStrPtr DWORD ?
+CLSMENUNAME ENDS
+ 
+OBJECT_ATTRIBUTES STRUCT
+	Len DWORD ?
+	RootDirectory DWORD ?
+	ObjectName	DWORD ?
+	Attributes DWORD ?
+	SecurityDescriptor DWORD ?
+	SecurityQualityOfService DWORD ?
+OBJECT_ATTRIBUTES ENDS
+ 
+UNICODE_STRING STRUCT
+	Len WORD ?
+	MaxLen WORD ?
+	Buffer DWORD ?
+UNICODE_STRING ENDS
+ 
+LARGE_UNICODE_STRING STRUCT
+    Len DWORD ?
+    MaxLenBAnsi DWORD ? ;  ULONG MaximumLength:31  ULONG bAnsi:1
+    Buffer DWORD ?
+LARGE_UNICODE_STRING ENDS
+ 
+ 
+IO_STATUS_BLOCK STRUCT
+	Status DWORD ?
+	Information DWORD ?
+IO_STATUS_BLOCK ENDS
+ 
+NTUSERGETMESSAGEINFO STRUCT
+  Msg MSG  <>
+  LParamSize DWORD ?
+NTUSERGETMESSAGEINFO ENDS
+ 
+.data
+hFile dd 0
+ob OBJECT_ATTRIBUTES <>
+;\??\i:\f.txt
+;13*2=26
+fileBuff db '\',0,'?',0,'?',0,'\',0,'i',0,':',0,'\',0,'f',0,'.',0,'t',0,'x',0,'t',0,0,0
+fName UNICODE_STRING <>
+cNameWU UNICODE_STRING <>
+mNameWU UNICODE_STRING <>
+ 
+classLUS LARGE_UNICODE_STRING <>
+titleLUS LARGE_UNICODE_STRING <>
+ 
+isb IO_STATUS_BLOCK <>
+ 
+buffer db "¿Ves como escribe? No es tan dificil de aceptar", 0
+ 
+wcx WNDCLASSEX <>
+ 
+mName db "MainMenu", 0
+cName db "MainWClass", 0
+ 
+tName db 'S',0,'H',0,'H',0,'H',0,'H',0,'H',0,'H',0,'H',0,'H',0,'H',0,0
+hWnd dd 0
+ 
+msg MSG <>
+ntMsg NTUSERGETMESSAGEINFO <>
+ 
+mNameW db 'M',0,'a',0,'i',0,'n',0,'M',0,'e',0,'n',0,'u',0,0,0
+cNameW db 'M',0,'a',0,'i',0,'n',0,'W',0,'C',0,'l',0,'a',0,'s',0,'s',0,0,0
+ 
+cStruct CLSMENUNAME <>
+ 
+ps PAINTSTRUCT <>
+ 
+pedantic db 0
+ 
+.code
+main:
+ 
+mov wcx.cbSize, SIZEOF(WNDCLASSEX)
+mov wcx.style, CS_HREDRAW or CS_VREDRAW
+mov wcx.lpfnWndProc, MainWndProc
+mov wcx.cbClsExtra, 0
+mov wcx.cbWndExtra, 0
+mov wcx.hInstance, 00400000h
+ 
+mov wcx.hIcon, 0
+mov wcx.hCursor, 0
+mov wcx.hIconSm, 0
+ 
+push GRAY_BRUSH
+call myZwGdiGetStockObject
+ 
+mov wcx.hbrBackground, eax
+mov wcx.lpszMenuName, offset mNameW
+mov wcx.lpszClassName, offset cNameW
+ 
+ 
+mov cNameWU.Len, 014h
+mov cNameWU.MaxLen, 016h
+mov cNameWU.Buffer, offset cNameW
+ 
+mov mNameWU.Len, 010h
+mov mNameWU.MaxLen, 012h
+mov mNameWU.Buffer, offset mNameW
+ 
+mov cStruct.ANSIPtr, offset mName
+mov cStruct.WIDEPtr, offset mNameW
+mov cStruct.UStrPtr, offset mNameWU
+ 
+mov classLUS.Len, 014h
+mov classLUS.MaxLenBAnsi, 016h
+mov classLUS.Buffer, offset cNameW
+ 
+mov titleLUS.Len, 4
+mov titleLUS.MaxLenBAnsi, 6
+mov titleLUS.Buffer, offset tName
+ 
+push 0
+push 0180h
+push 0
+push offset cStruct
+push offset cNameWU
+push offset cNameWU
+push offset wcx
+call myZwUserRegisterClassExWOW
+ 
+push 0
+push 040000400h 
+push 0
+push 00400000h
+push 0
+push 0
+push 200; CW_USEDEFAULT
+push 200; CW_USEDEFAULT
+push 150
+push 150
+push WS_OVERLAPPEDWINDOW
+push offset titleLUS
+push offset classLUS
+push offset classLUS
+push 0
+call myZwUserCreateWindowEx
+mov hWnd, eax
+ 
+push SW_SHOW
+push hWnd
+call myZwUserShowWindow
+ 
+;1ra funcion: GUI visible!
+ 
+bucle:
+push 0
+push 0
+push 0
+push offset ntMsg
+call myZwUserGetMessage
+.if eax != 0 && eax != -1
+ 
+.if !pedantic
+    push offset ntMsg.Msg
+    call DispatchMessageW
+.else
+  .if  ntMsg.Msg.message == WM_SYSCOMMAND
+   push  33h
+   push 0
+   call myZwUserCallOneParam
+    jmp basta
+  .endif
+.endif
+ 
+jmp bucle
+.endif
+ 
+basta:
+;Boton derecho en el taskbar, cerrar, y llega aca
+ 
+mov fName.Len, 24
+mov fName.MaxLen, 24
+mov fName.Buffer, offset fileBuff
+ 
+mov ob.Len, 018h
+mov ob.RootDirectory, 0
+mov ob.ObjectName, offset fName
+mov ob.Attributes, 00000040h
+mov ob.SecurityDescriptor, 0
+mov ob.SecurityQualityOfService, 0
+ 
+push 00000060h  
+push 0
+push offset isb
+push offset ob
+push 010100080h
+push offset hFile
+call myZwOpenFile
+;2da funcion apertura de archivo en hFile tenes el HANDLE al archivo
+ 
+push 0
+push 0
+push 47
+push offset buffer
+push offset isb
+push 0
+push 0
+push 0
+mov eax, hFile
+push eax
+call myZwWriteFile
+;3ra funcion, escritura en archivo
+ 
+ 
+ret
+ 
+myZwOpenFile:
+mov     eax,74h
+call    SystemCallStub
+ret     18h
+ 
+myZwWriteFile:
+mov     eax,112h
+call    SystemCallStub
+ret     24h
+ 
+myZwUserCreateWindowEx:
+mov     eax,1157h
+call    SystemCallStub
+ret     3Ch
+ 
+myZwUserRegisterClassExWOW:
+mov     eax,11E8h
+call    SystemCallStub
+ret     1Ch
+ 
+myZwGdiGetStockObject:
+mov     eax,10C8h
+call    SystemCallStub
+ret     4
+ 
+myZwUserShowWindow:
+mov     eax,122Bh
+call    SystemCallStub
+ret     8
+ 
+myZwUserGetMessage:
+mov     eax,11A5h
+call    SystemCallStub
+ret     10h
+ 
+myZwUserCallOneParam:
+mov     eax,1143h
+call    SystemCallStub
+ret     8
+ 
+myZwUserMessageCall:
+mov     eax,11CCh
+call    SystemCallStub
+ret     1Ch
+ 
+ 
+myZwUserBeginPaint:
+mov     eax,1134h
+call    SystemCallStub
+ret     8
+ 
+myZwUserEndPaint:
+mov     eax,1172h
+call    SystemCallStub
+ret     8
+ 
+SystemCallStub:
+mov     edx,esp
+;sysenter
+dw 340fh
+ret
+ 
+MainWndProc:
+ 
+.if dword ptr [esp+8] == WM_NCCREATE
+    push 0
+    push 029Eh
+    push 0
+    push [esp+16+12]
+    push [esp+12+16]
+    push [esp+8+20]
+    push [esp+4+24]
+    call myZwUserMessageCall
+    xor eax, eax
+    inc eax
+    ret 10h
+.endif
+ 
+.if dword ptr [esp+8] == WM_NCPAINT
+    push 0
+    push 029Eh
+    push 0
+    push [esp+16+12]
+    push [esp+12+16]
+    push [esp+8+20]
+    push [esp+4+24]
+    call myZwUserMessageCall
+    xor eax, eax
+    ret 10h
+.endif
+ 
+.if dword ptr [esp+8] == WM_DESTROY
+   push  33h
+   push 0
+   call myZwUserCallOneParam
+   ;   call PostQuitMessage
+   xor eax, eax
+   ret 010h
+.endif
+ 
+.if dword ptr [esp+8] == WM_PAINT
+    push offset ps
+    push dword ptr [esp+8]
+    call myZwUserBeginPaint
+    .if !pedantic
+        invoke SetBkMode, ps.hdc, TRANSPARENT
+        invoke SetTextColor, ps.hdc, 0
+        invoke TextOutA, ps.hdc, 5,25, offset buffer, 19
+    .endif
+    push offset ps
+    push dword ptr [esp+8]
+    call myZwUserEndPaint
+    xor eax, eax
+    ret 010h
+.endif
+ 
+.if !pedantic
+    jmp DefWindowProcW
+.endif
+ 
+push 0
+push 029Eh
+push 0
+push [esp+16+12]
+push [esp+12+16]
+push [esp+8+20]
+push [esp+4+24]
+call myZwUserMessageCall
+xor eax, eax
+ret 10h
+ 
+end main

@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1396587619 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\client_example\client.cpp
+	"client.h"
+
+1396587483 c:\documents and settings\owner\desktop\programming\c . c++\boost\client_example\client.h
+	<iostream>
+	<istream>
+	<ostream>
+	<string>
+	<queue>
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+
+1396594045 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\client_example\main.cpp
+	<iostream>
+	<boost/array.hpp>
+	<boost/thread/thread.hpp>
+	<boost/thread/xtime.hpp>
+	"client.h"
+

@@ -1,0 +1,29 @@
+Nombre del ejemplo: Texto flotante
+Nombre corto: textro_flotante
+Licencia: GPL 2 (vea el archivo COPYING)
+Fecha: Febrero del 2006
+Autor: Hugo Ruscitti 
+Email: hugoruscitti@gmail.com
+Web: www.losersjuegos.com.ar
+
+Introducción:
+
+	Muestra una cadena de texto que se moverá siguiendo los valores que
+	provee la función coseno.
+
+	Este ejemplo está basado en el artículo `Fuentes gráficas` que 
+	escribí en Enero del 2006. Puede encontrar el artículo completo en
+	el sitio web: http://www.losersjuegos.com.ar
+
+	Note que la fuente utilizada en este artículo incluye todos los 
+	caracteres del conjunto iso_8859_1. El artículo de la web incluia 
+	muchos menos caracteres. (vea la página de manual con 
+	`man iso_8859_1` para mas detalles).
+
+	Aquí no se utiliza un bucle de velocidad constante ni una técnica
+	de optimización de impresión (es solo un ejemplo).
+
+Requiere:
+
+	* libSDL
+	* libSDL_image

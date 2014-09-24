@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1396755871 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\server_broadcast\main.cpp
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+

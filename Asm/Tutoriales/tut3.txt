@@ -1,0 +1,391 @@
+                		        -          
+			       -----=========-----
+           -------==========================================----------
+----------=====_masta_'s tut on win32-ASM-coding part 2 revision 1=====-----------
+           -------==========================================----------
+
+( I called this revision 1 because it contains new sourcecode without errors
+  _masta_ found when going through it again - fungus )
+
+	     		     --==INTRO==--
+
+Hi,
+since part0 and part1 have been relatively successful, I am happy to
+present you part2 now.
+Actually I wanted to do something on GUI, but I was very busy lately
+so something without GUI-coding for now. I think it will be interesting
+anyway I hope.
+Starting from this tutorial I won't explain the easy things like 
+MessageBox anymore, because they have been fully explained in both of
+the first parts. I don't think it will cause you any problem once you
+did the ealier parts.
+
+
+
+
+		        --==WHAT IS NEEDED?==--
+
+
+	1. Texteditor
+	2. TASM 5.0 with libs, etc.
+	3. A Windows API reference (WIN32.HLP)
+	4. Starcraft (ONLY for testing purposes!;])
+	5. some Braincells left ;)
+	6. some basic ASM-knowledge (earlier lessons)
+        7. Numega Softice 3.xx (not really a must)
+
+
+
+
+
+	          --==WHAT IS IT ABOUT THIS TIME?==--
+
+Is there any gamer who doesn't apreciate little aids sometimes ...
+
+more lives
+more money
+more energy
+more gas
+more ...
+
+What I am talking about is a trainer, very common in C64-/Amiga-/
+PC-DOS-times, unfortunately getting less lately, although there are
+some from time to time. But it is still not like in the 
+"good old times".
+So my target is Starcraft (Yes I know there are trainers for it!).
+
+My reasons were: - the game is very popular
+		 - I played it when I got the idea to this tut :)
+
+
+
+
+		           --==LET'S GO==--
+
+Some thought before starting our session.
+
+Definition of Trainer: - a little program, that changes parts of
+			 memory used by a game to for example gain
+			 more money, etc ...
+
+Normally it isn't allowed in Windows to access memory addresses of
+another program. Luckily our dearest friend Billy implemented a
+couple of functions, which were meant to debug originally. We can
+use these for our purposes.
+These functions are OpenProcess, WriteProcessMemory and 
+ReadProcessMemory. With the help of these we can read (and write) 
+from (into) memory addresses of another program.
+Basically our program acts like a debugger, accessing other programs
+memory and changing it.
+
+
+
+
+		           --==STRUCTURE==--
+
+1. Intro (little introduction shown using a MessageBox)
+
+2. Get Process_ID of the program to be "trained"
+	 (find main window of Starcraft; get process
+	  with the help of the window) 
+
+3. OpenProcess
+
+4. Change values
+
+5. Close Handle to process, end (Cleanup)
+
+
+
+
+
+	            --==IMPORTANT API-FUNCTIONS==--
+
+The handle of the main window we can get with FindWindowA, where we gotta
+get the name of the windowclass ("SWarrClass") and the name of the window 
+("Starcraft"). We can do this with the help of Softice (TASK->HWND).
+
+With the windowhandle we can get the corresponding process, or rather PID
+by using GetWindowThreadProcessId.
+
+Now we take a handle of the memory area of the process with the help of 
+the PID -> OpenProcess.
+
+Everything is getting easier now. Like in "normal" fileoperations we can 
+write into the memory of a running program with the handle and the function 
+WriteProcessMemory.
+
+Last but not least we call CloseHandle, to close our handle to the process,
+which is not really important in Win95, but who trusts software coming from
+Redmont ;-)?
+
+And very last the known function ExitProcess.
+
+
+
+
+	             --==THE MEMORY ADDRESSES==--
+
+We can easily get the adds of for example the minerals by using a debugger
+and searching for the hex-values of the decimal-values shown on the screen.
+In my version it it like the following:
+
+			Minerals = 04EFE08h
+			Gas      = 04EFE38h
+
+
+
+
+	                  --==THE SOURCE==--
+
+This time not very long and as usual not very good structured, but should
+be easy to understand anyway ...
+
+
+;This is a slightly edited source to my tutorial (Part 2)
+;I did a mistake while searching the informations for the memory locations
+;not taking care, that starcraft uses different locations ...
+
+;Only change is that the million-value is written 2 times
+;and 8 bytes instead of 4
+
+                                        ; Set some params for the assembler
+.386P
+Locals
+jumps
+
+
+.Model Flat ,StdCall
+PROCESS_VM_WRITE    equ 020h            ; Flags for the write-access
+PROCESS_VM_OPERATION    equ 008h        ; to the process
+
+
+
+mb_ok      equ 0
+minerals_pos       equ 04efe08h
+gas_pos        equ 04efe38h
+
+
+
+; declaration of used API-functions
+
+
+extrn     MessageBoxA      : PROC       ; Show a Messagebox
+extrn     FindWindowA      : PROC       ; Find Window with the name
+extrn     GetWindowThreadProcessId :Proc; Find PID with the HWND
+extrn     OpenProcess      : PROC       ; Procedure to access the process
+extrn     WriteProcessMemory: PROC      ; Write into memory of the running
+                                        ; program
+extrn     CloseHandle      : PROC       ; Close the handle again
+                                        ; Cleanup, after use ;)
+extrn     ExitProcess      : PROC       ; Procedure to exit the program
+
+
+
+; here begins our Data
+.Data
+
+
+caption  db "_masta_'s essay on Win32-ASM-Coding, part 2",0 
+              ;Captionstring, 0-terminated
+
+
+text     db "Hi, here we are at part 2",13,10
+     db "This tut will describe you how to make",13,10
+     db "Win32-ASM Trainer",0
+
+                                ; Introtext , 0-terminated
+
+
+err_cap  db "ERROR",0           ; Caption for Errormessages
+
+
+notrun   db "Sorry, Starcraft is not running",0 ; Error if SC isn't running
+
+
+no_write db "Mmmhhhh, a problem, by writing",13,10
+     db "to Starcrafts memory",13,10,0 
+
+
+readycap db "Ready",0           ; Caption for "ready"
+
+
+readytxt db "Ok, now you have 1000000 Minerals and Gas",0 
+
+                                ; Text for "ready"
+
+
+million  dd 1000000             ; How much do you want??? ;]
+         dd 1000000
+
+wnd_name db "Starcraft",0       ; Name of the Starcraft-window
+cls_name db "SWarClass",0       ; Class of the Starcraft-window
+
+
+pid_sc   dd ?                   ; Here we save the PID ...
+
+
+p_hand   dd ?                   ; and here the handle to the
+                                ; process
+
+
+; And here we start with our code
+
+.Code
+Main:
+        push mb_ok
+        push offset caption
+        push offset text
+        push 0
+        call MessageBoxA        ;Startmessage
+
+
+is_SC_RUN:
+
+
+    push offset wnd_name
+    push offset cls_name
+    call FindWindowA    ; Find Window handle with Windowclass and
+                        ; -name
+
+
+    cmp  eax,0          ; if 0, window is not existing
+    jz   SC_isnt_run_end; --> Starcraft is not launched
+
+
+    push offset pid_sc            ; Where to save the PID ?
+    push eax                      ; PUSH Windowhandle 
+    call GetWindowThreadProcessId ; Determine PID with Windowhandle
+
+open_the_process:
+    push pid_sc                                   ; PUSH PID
+    push 0                                        ; only used when 
+                                                  ; building new 
+                                                  ; processes
+    push PROCESS_VM_WRITE OR PROCESS_VM_OPERATION ; activate write-access
+
+    call OpenProcess    ; Get handle of Starcraft
+    mov  p_hand,eax     ; Save handle to p_hand
+
+
+change_Minerals:
+
+
+    push 0                 ; Can be zero mostly
+    push 8                 ; Write 8 Bytes (2 Dwords)
+    push offset million    ; How much ? (1 Million)
+    push minerals_pos      ; 1st Memoryaddress
+    push p_hand            ; Handle to the process
+    call WriteProcessMemory; write minerals  
+    cmp  eax,0
+    jz   error_on_write    ; If any error while writing (eax=0) -> end
+
+
+change_gas:                ; the same again for gas, but this time
+                           ; the memory address of the gas is PUSHed
+    push 0
+    push 8
+    push offset million
+    push gas_pos
+    push p_hand
+    call WriteProcessMemory
+    cmp  eax,0
+    jz   error_on_write
+
+
+
+Trainer_ready:
+
+
+        push mb_ok              
+        push offset readycap    
+        push offset readytxt    
+        push 0                  
+        call MessageBoxA    ; Everything OK
+
+
+
+close_the_PID_Handle:
+    push p_hand
+    Call CloseHandle    ; CloseHandle
+    jmp  end_           ; Go to End
+
+
+
+error_on_write:
+
+
+        push mb_ok              
+        push offset err_cap     
+        push offset no_write    
+        push 0               
+        call MessageBoxA          ; Mmmhhh, Error while writing
+        jmp  close_the_PID_Handle ; Close handle before quit
+
+
+SC_isnt_run_end:
+
+
+        push mb_ok              
+        push offset err_cap     
+        push offset notrun      
+        push 0               
+        call MessageBoxA        ; nothing there to train =(
+    
+end_:
+
+
+        CALL    ExitProcess     ; Exit program
+End Main                        ; End of Code Determination 
+                                  of Jump-point (Main)
+
+;--------------------------==END OF SOURCE==----------------------------
+
+
+;--------------------------------START---------------------------make.bat
+@echo off
+echo assembling your trainer
+tasm32 /mx /m3 /z /q w95asm_2
+tlink32 -x /Tpe /aa /c w95asm_2,w95asm_2,, import32.lib
+del *.obj
+del *.map
+;---------------------------------END----------------------------make.bat
+
+
+
+	                  --==FINAL WORDS==--
+
+OK, as I told you before this was a little tutorial, but I think very
+interesting anyway. I guess there is not much to optimize (sorry fungus), 
+maybe the routine for writing into memory (use of a procedure).
+I hope my mailbox (masta_t@usa.net) is flodded soon (CRITICS ARE WELCOME)
+and you are all here next time. I promise the next one will be about GUI,
+because many people told me to do so.
+BTW, I am trying to build an IRC channel (EFNET) on this (#win32asm) and
+finally there is a project-page 'HTTP://win32asm.cjb.net'!
+If anyone is interested, any contribution to this subject is very welcome,
+we are waiting for it ... 
+I really hope there are enough people, who spend their time on this 
+subject and who are willing to give their knowledge to others, too.
+
+
+
+	                  --==GREETINX==--
+
+VucoeT (Translator and Designer), scut (You are GREAT, why not code in Win32?),
+|caligo| (bad news about you :(), fravia (best on the web), +Aescalapius
+(i hope to break Brainbreaker), not4you (wir Ossis muessen zusammenhalten ;)),
+fungus (something to optimze), CyberBobjr (for translating to frensh), DASavant,
+mornings, i_magnus, Quest, Silvio, TheDoctor, everyone on #LAC and 
+#cracking4newbies and to every cracker around the world.
+
+
+
+
+	                  --==WISE WORDS==--
+
+  ------===========================================================-------
+-----=====A hardcoded serial is as common as a 25-year-old virgin=====------
+  ------===========================================================-------
+                          -----=========-----
+				   -

@@ -1,0 +1,21 @@
+// este archivo contiene datos auxiliares para el programa Doxygen
+/*!
+ * \mainpage Ejemplo sobre colisión de plataformas
+ *
+ * \section intro Introducción
+ *
+ * Esta es la documentación del programa 'colisión de plataformas' que, 
+ * generalmente, se distribuye junto con un artículo que explica su 
+ * funcionamiento. Si quiere ver el artículo completo visite el sitio 
+ * http://www.losersjuegos.com.ar.
+ * 
+ * Puede hacer uso de este programa sólo bajo los términos de la licencia 
+ * pública general GPL, vea los archivo COPYING o COPYING_ES para mas detalles.
+ *
+ * \section cred Creditos
+ *
+ * \li \c Programación: Hugo Ruscitti
+ * \li \c Gráficos: Walter Velazquez
+ * \li \c web: http://www.losersjuegos.com.ar
+ * \li \c e-mail: hugoruscitti@yahoo.com.ar
+ */

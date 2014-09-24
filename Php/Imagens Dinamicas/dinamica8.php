@@ -1,0 +1,68 @@
+<?php
+/*
+C O D E D
+                By
+					      C A R L M Y C O L
+*/
+function azar($im) {
+//creo mi funcio para randomizar la firma ^^
+$base=1;
+//creo la variable que me ayudara en la creacion de mi array
+$conteo=1;
+//creo variable que me ayudara a contar cuantos archivos hay
+$d = dir("uploads/");
+//creo mi variable donde estan las firmas
+
+   while (false !== ($entry = $d->read())) {
+   //hago un while para que cada vez que lea un archivo
+   $conteo =$conteo+1;
+   //conteo entonces es uno mas cada ves que encuentra un nuevo archivo ^^
+   //ven la cosa toma forma despues de todo ^^
+   $imagenes[$base]=$d->path.$entry;
+   //voy creando mi array con base
+   $base=$base+1;
+   //como no sabemos cuantos archivos va a haber base es igual pero mas 1
+   //para que la prozima ves que pase el while ya sea el siguiente numero del array
+   
+
+}
+//termino mi ciclo
+
+   $d->close();   
+   //cerramos nuestro directorio
+   $azar=rand(1,$conteo);
+   //conteo era 1 despues del ciclo es el numero total de archivos en el directorio
+
+
+
+$partes_ruta = pathinfo($imagenes[$azar]);
+//creo array para obtener datos de lo que quedo randomizado 
+
+if ($partes_ruta['extension']=!".jpg") {
+//creo un if a partir de la variable anterior para saber si es jpg o no ^^
+$azar=$azar-1;
+//si no es jpg entonces reducimos el el azar en 1 para que quede diferente
+}
+
+
+$firmafinal=$imagenes[$azar];
+//definimos variable que va a retornar la funcion ^^
+
+    return $firmafinal;
+	//la retornamos
+}
+
+$firma = azar(7);
+//definimos variable que obtendra el resultado de la funcion
+//ese siete lo puse para que no quedara solo pero ese siete no hace nada
+//porque ese siete seria el valor de la variable im pero esa variable no influye ^^
+
+$firmafinal = imagecreatefromjpeg($firma);
+//a partir de la variable anterior creamos una imagen con el fondo de la misma
+
+header("Content-type: image/jpeg");
+//decimos que lo que se devuelbe es de tipo jpg
+
+imagejpeg($firmafinal);
+//y listop xDD
+?>

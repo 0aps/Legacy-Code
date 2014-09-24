@@ -1,0 +1,21 @@
+
+###########################################################################################
+                                                                             PARAMETROS PARA FUNCIONES
+###########################################################################################
+
+MessageBox(NULL, "Contexto del mensaje",     "TITULO",     MB_ICONQUESTION );
+                                                                                                                         MB_ICONQUESTION
+                                                                                                                         MB_ICONWARNING
+                                                                                                                         MB_ICONINFORMATION
+                                                                                                                         MB_ICONERROR 
+                                                                                                                         MB_CANCELTRYCONTINUE
+                                                                                                                         MB_ABORTRETRYIGNORE
+                                                                                                                         MB_HELP
+                                                                                                                         MB_OK
+                                                                                                                         MB_OKCANCEL
+                                                                                                                         MB_RETRYCANCEL
+                                                                                                                         MB_YESNO
+                                                                                                                         MB_YESNOCANCEL
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         

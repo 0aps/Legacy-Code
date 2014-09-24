@@ -1,0 +1,10 @@
+stream_socket: Closing socket
+stream_socket: Checking if socket is open
+stream_socket: Opening new socket
+stream_socket: Starting asynchronous connect to 127.0.0.1:13
+stream_socket: Asynchronous connect succeeded
+stream_socket: Checking if socket is open
+stream_socket: Starting asynchronous receive
+stream_socket: Asynchronous receive succeeded
+stream_socket: Starting asynchronous receive
+stream_socket: Asynchronous receive failed: End of file

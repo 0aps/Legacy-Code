@@ -1,0 +1,4 @@
+; dlltool --base-file C:\DOCUME~1\Owner\LOCALS~1\Temp/cca02096.base --output-exp Project1.exp --dllname Project1.dll --output-def libProject1.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\DOCUME~1\Owner\LOCALS~1\Temp/cca02096.def --output-lib libProject1.a
+EXPORTS
+	DLKStart @ 1
+	DLKExit @ 2

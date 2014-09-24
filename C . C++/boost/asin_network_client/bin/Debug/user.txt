@@ -1,0 +1,6 @@
+angel,hellow_world,
+jose,carajo,
+luis,no_se,
+maria,klk,
+pedro,como_estas,
+xd,maria,

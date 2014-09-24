@@ -1,0 +1,33 @@
+# Project: ClassName
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = HookServ_private.res
+OBJ  = ClassName.o $(RES)
+LINKOBJ  = ClassName.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -s -lwinmm  libClassHook.a  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = ClassName.exe
+CXXFLAGS = $(CXXINCS)   -fexpensive-optimizations -O3
+CFLAGS = $(INCS)   -fexpensive-optimizations -O3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ClassName.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "ClassName.exe" $(LIBS)
+
+ClassName.o: ClassName.c C:/Dev-Cpp/include/stdio.h   C:/Dev-Cpp/include/_mingw.h C:/Dev-Cpp/include/sys/types.h   C:/Dev-Cpp/include/windows.h Classhook.h
+	$(CC) -c ClassName.c -o ClassName.o $(CFLAGS)
+
+HookServ_private.res: HookServ_private.rc 
+	$(WINDRES) -i HookServ_private.rc --input-format=rc -o HookServ_private.res -O coff 

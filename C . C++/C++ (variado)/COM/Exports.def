@@ -1,0 +1,11 @@
+; Exports.Def
+
+LIBRARY			MyCOM
+DESCRIPTION		"MyCOM Server"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1396584475 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\time_timer\main.cpp
+	<boost/asio.hpp>
+	<ctime>
+	<iostream>
+

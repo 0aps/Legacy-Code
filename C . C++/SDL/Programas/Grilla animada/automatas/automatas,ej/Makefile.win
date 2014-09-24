@@ -1,0 +1,36 @@
+# Project: Project5
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = ../automatas/actor.o ../automatas/main.o ../automatas/util.o $(RES)
+LINKOBJ  = ../automatas/actor.o ../automatas/main.o ../automatas/util.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -s -lwinmm -lwsock32  -lmingw32  -lGdi32 -masm=intel -lSDLmain -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "personaje animacion.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "personaje animacion.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "personaje animacion.exe" $(LIBS)
+
+../automatas/actor.o: ../automatas/actor.c C:/Dev-Cpp/include/SDL/SDL_Image.h   C:/Dev-Cpp/include/SDL/SDL.h C:/Dev-Cpp/include/SDL/SDL_main.h   C:/Dev-Cpp/include/SDL/SDL_types.h C:/Dev-Cpp/include/SDL/begin_code.h   C:/Dev-Cpp/include/SDL/close_code.h C:/Dev-Cpp/include/SDL/SDL_getenv.h   C:/Dev-Cpp/include/SDL/SDL_error.h C:/Dev-Cpp/include/SDL/SDL_rwops.h   C:/Dev-Cpp/include/stdio.h C:/Dev-Cpp/include/_mingw.h   C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include/stddef.h   C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include/stdarg.h   C:/Dev-Cpp/include/sys/types.h C:/Dev-Cpp/include/SDL/SDL_timer.h   C:/Dev-Cpp/include/SDL/SDL_audio.h   C:/Dev-Cpp/include/SDL/SDL_byteorder.h   C:/Dev-Cpp/include/SDL/SDL_cdrom.h   C:/Dev-Cpp/include/SDL/SDL_joystick.h   C:/Dev-Cpp/include/SDL/SDL_events.h C:/Dev-Cpp/include/SDL/SDL_active.h   C:/Dev-Cpp/include/SDL/SDL_keyboard.h   C:/Dev-Cpp/include/SDL/SDL_keysym.h C:/Dev-Cpp/include/SDL/SDL_mouse.h   C:/Dev-Cpp/include/SDL/SDL_video.h C:/Dev-Cpp/include/SDL/SDL_mutex.h   C:/Dev-Cpp/include/SDL/SDL_quit.h C:/Dev-Cpp/include/SDL/SDL_version.h   C:/Dev-Cpp/include/SDL/SDL.h ../automatas/actor.h   C:/Dev-Cpp/include/string.h C:/Dev-Cpp/include/stdlib.h   ../automatas/util.h
+	$(CPP) -c ../automatas/actor.c -o ../automatas/actor.o $(CXXFLAGS)
+
+../automatas/main.o: ../automatas/main.c C:/Dev-Cpp/include/SDL/SDL.h   C:/Dev-Cpp/include/SDL/SDL_main.h C:/Dev-Cpp/include/SDL/SDL_types.h   C:/Dev-Cpp/include/SDL/begin_code.h C:/Dev-Cpp/include/SDL/close_code.h   C:/Dev-Cpp/include/SDL/SDL_getenv.h C:/Dev-Cpp/include/SDL/SDL_error.h   C:/Dev-Cpp/include/SDL/SDL_rwops.h C:/Dev-Cpp/include/stdio.h   C:/Dev-Cpp/include/_mingw.h   C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include/stddef.h   C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include/stdarg.h   C:/Dev-Cpp/include/sys/types.h C:/Dev-Cpp/include/SDL/SDL_timer.h   C:/Dev-Cpp/include/SDL/SDL_audio.h   C:/Dev-Cpp/include/SDL/SDL_byteorder.h   C:/Dev-Cpp/include/SDL/SDL_cdrom.h   C:/Dev-Cpp/include/SDL/SDL_joystick.h   C:/Dev-Cpp/include/SDL/SDL_events.h C:/Dev-Cpp/include/SDL/SDL_active.h   C:/Dev-Cpp/include/SDL/SDL_keyboard.h   C:/Dev-Cpp/include/SDL/SDL_keysym.h C:/Dev-Cpp/include/SDL/SDL_mouse.h   C:/Dev-Cpp/include/SDL/SDL_video.h C:/Dev-Cpp/include/SDL/SDL_mutex.h   C:/Dev-Cpp/include/SDL/SDL_quit.h C:/Dev-Cpp/include/SDL/SDL_version.h   C:/Dev-Cpp/include/stdlib.h C:/Dev-Cpp/include/string.h   ../automatas/util.h ../automatas/actor.h
+	$(CPP) -c ../automatas/main.c -o ../automatas/main.o $(CXXFLAGS)
+
+../automatas/util.o: ../automatas/util.c C:/Dev-Cpp/include/SDL/SDL.h   C:/Dev-Cpp/include/SDL/SDL_main.h C:/Dev-Cpp/include/SDL/SDL_types.h   C:/Dev-Cpp/include/SDL/begin_code.h C:/Dev-Cpp/include/SDL/close_code.h   C:/Dev-Cpp/include/SDL/SDL_getenv.h C:/Dev-Cpp/include/SDL/SDL_error.h   C:/Dev-Cpp/include/SDL/SDL_rwops.h C:/Dev-Cpp/include/stdio.h   C:/Dev-Cpp/include/_mingw.h   C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include/stddef.h   C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include/stdarg.h   C:/Dev-Cpp/include/sys/types.h C:/Dev-Cpp/include/SDL/SDL_timer.h   C:/Dev-Cpp/include/SDL/SDL_audio.h   C:/Dev-Cpp/include/SDL/SDL_byteorder.h   C:/Dev-Cpp/include/SDL/SDL_cdrom.h   C:/Dev-Cpp/include/SDL/SDL_joystick.h   C:/Dev-Cpp/include/SDL/SDL_events.h C:/Dev-Cpp/include/SDL/SDL_active.h   C:/Dev-Cpp/include/SDL/SDL_keyboard.h   C:/Dev-Cpp/include/SDL/SDL_keysym.h C:/Dev-Cpp/include/SDL/SDL_mouse.h   C:/Dev-Cpp/include/SDL/SDL_video.h C:/Dev-Cpp/include/SDL/SDL_mutex.h   C:/Dev-Cpp/include/SDL/SDL_quit.h C:/Dev-Cpp/include/SDL/SDL_version.h   ../automatas/util.h ../automatas/actor.h C:/Dev-Cpp/include/string.h
+	$(CPP) -c ../automatas/util.c -o ../automatas/util.o $(CXXFLAGS)

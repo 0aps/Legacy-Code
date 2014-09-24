@@ -1,0 +1,13 @@
+<object id="counters99" allowscriptaccess="always" type="application/x-shockwave-flash" 
+data="http://static.99widgets.com/counters/swf/counters.swf?id=173874&ln=es" width="150" 
+height="175" wmode="transparent">
+<param name="allowscriptaccess" value="always" />
+
+<param name="movie" value="http://static.99widgets.com/counters/swf/counters.swf?
+id=173874&ln=es" /><param name="wmode" value="transparent" />
+
+<embed src="http://static.99widgets.com/counters/swf/counters.swf?id=173874&ln=es"
+ type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent"
+ width="150" height="175"></embed>
+
+</object>

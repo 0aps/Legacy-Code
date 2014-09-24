@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1404947800 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\main.cpp
+	<iostream>
+	<vector>
+	<set>
+	<iostream>
+	<algorithm>
+	<vector>
+
+1397775738 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\30.cpp
+	<ctime>
+	<cmath>
+	<limits>
+
+1398042622 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\minimo_comun_multiplo.c
+	<iostream>
+
+1397775536 c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\ac_time.h
+	<Windows.h>
+	<sys/time.h>
+	<ctime>
+	<inttypes.h>
+
+1397795251 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\grid_euler.c
+	<iostream>
+	<fstream>
+	<queue>
+	<vector>
+
+1397995566 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\collatz.c
+	<iostream>
+	<map>
+	<algorithm>
+
+1398000123 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\inner_product.c
+	<iostream>
+	<functional>
+	<numeric>
+
+1398046258 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\combinatory.c
+	<stdio.h>
+	<inttypes.h>
+	<iostream>
+	<stdexcept>
+	<limits>
+	<stdio.h>
+
+1398043487 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\pruebas\try\trys\maximo_comn_divisor.c
+

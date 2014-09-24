@@ -1,0 +1,33 @@
+# Project: Colicion
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = coliciones.o csprite.o $(RES)
+LINKOBJ  = coliciones.o csprite.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -s -lwinmm -lwsock32 -lmingw32 -lSDLmain -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Colicion.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Colicion.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Colicion.exe" $(LIBS)
+
+coliciones.o: coliciones.cpp
+	$(CPP) -c coliciones.cpp -o coliciones.o $(CXXFLAGS)
+
+csprite.o: csprite.cpp
+	$(CPP) -c csprite.cpp -o csprite.o $(CXXFLAGS)

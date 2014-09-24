@@ -1,0 +1,9 @@
+Esta programa se distribuye junto con un artículo que explica su funcionamiento. Si quiere ver el artículo completo visite el sitio http://www.losersjuegos.com.ar.
+
+Puede hacer uso de este programa sólo bajo los términos de la licencia pública general GPL, vea los archivo COPYING o COPYING_ES para mas detalles.
+
+Creditos
+  Programación: Hugo Ruscitti 
+  Gráficos: Walter Velazquez 
+  web: http://www.losersjuegos.com.ar 
+  e-mail: hugoruscitti@yahoo.com.ar 

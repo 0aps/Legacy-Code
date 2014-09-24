@@ -1,0 +1,67 @@
+en
+conf t
+host R1
+int serial 2/0
+ip address 10.0.0.1 255.0.0.0
+no sh
+exit
+int FastEthernet 0/0
+ip address 172.16.0.1 255.255.0.0
+no sh
+exit
+route rip
+network 10.0.0.0
+network 172.16.0.0
+
+en
+conf t
+host R2
+int serial 2/0
+ip address 10.0.0.2 255.0.0.0
+clock rate 64000
+no sh
+exit
+int serial 3/0
+ip address 11.0.0.1 255.0.0.0
+clock rate 64000
+no sh
+exit
+router eigrp 3
+network 10.0.0.0
+network 11.0.0.0
+
+en
+conf t
+host R3
+int serial 2/0
+ip address 11.0.0.2 255.0.0.0
+no sh
+exit
+int FastEthernet 0/0
+ip address 192.168.0.1 255.255.255.0
+no sh
+exit
+route rip
+network 11.0.0.0
+network 192.168.0.0
+
+
+enable secret hola [prodominancia sobre la normal] [conf t]
+enable pass   hola
+username aps password 0 hola [0=claro, 7=encriptada][conf t]
+
+line vty 0 4
+pass x
+login
+exec-timeout 1 30 [un minuto trenta]
+
+line console 0
+pass x
+login
+exec-timeout 1 30
+
+
+do show controller [int]
+do show running-config
+do write
+

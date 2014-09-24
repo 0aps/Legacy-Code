@@ -1,0 +1,34 @@
+# Project: Project3
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = dllmain.o $(RES)
+LINKOBJ  = dllmain.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -s -lwinmm -lwsock32 -lmingw32 -lSDLmain -lSDL -lSDL_ttf -lSDL_image -lSDL_mixer -masm=intel --no-export-all-symbols --add-stdcall-alias 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Project3.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1 
+CFLAGS = $(INCS) -DBUILDING_DLL=1 
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Project3.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=libProject3.def
+STATICLIB=libProject3.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+dllmain.o: dllmain.cpp
+	$(CPP) -c dllmain.cpp -o dllmain.o $(CXXFLAGS)

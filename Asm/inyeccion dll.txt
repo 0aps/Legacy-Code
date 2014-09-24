@@ -1,0 +1,40 @@
+.386
+.model flat,stdcall
+option casemap:none
+include \masm32\include\windows.inc
+include \masm32\include\kernel32.inc
+includelib \masm32\lib\kernel32.lib
+ 
+.const
+ID_proceso EQU 2964   ;La ID del proceso q sea
+ 
+.data
+Kernel32 db "kernel32.dll", 0
+LoadLibrary_nombre db "LoadLibraryA", 0
+DLL db "C:\DLL.dll", 0
+ 
+.data?
+Proceso_ID DWORD ?
+Proceso_handle DWORD ?
+Kernel32_offset DWORD ?
+LoadLibrary_offset DWORD ?
+String DWORD ?
+Proceso PROCESSENTRY32 <?>
+ 
+.code
+Start:
+invoke GetModuleHandle, addr Kernel32
+mov Kernel32_offset, eax
+invoke GetProcAddress, Kernel32_offset, addr LoadLibrary_nombre
+mov LoadLibrary_offset, eax
+ 
+mov Proceso.dwSize, 296
+invoke OpenProcess, PROCESS_ALL_ACCESS, FALSE, ID_proceso
+mov Proceso_handle, eax
+invoke VirtualAllocEx, Proceso_handle, NULL, 64, MEM_COMMIT + MEM_RESERVE, PAGE_READWRITE
+mov String, eax
+invoke WriteProcessMemory, Proceso_handle, String, addr DLL, 64, NULL
+invoke CreateRemoteThread, Proceso_handle, NULL, NULL, LoadLibrary_offset, String, NULL, NULL
+invoke CloseHandle, Proceso_handle
+invoke ExitProcess, 0
+End Start

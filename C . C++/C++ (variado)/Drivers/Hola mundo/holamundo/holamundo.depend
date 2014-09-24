@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1324156785 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\drivers\hola mundo\holamundo\driver.c
+	<ddk/ntddk.h>
+

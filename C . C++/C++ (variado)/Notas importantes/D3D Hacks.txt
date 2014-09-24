@@ -1,0 +1,32 @@
+// ===========================  CrossFire ====================================
+
+int x = ( GetSystemMetrics( 0 ) / 2); 
+int y = ( GetSystemMetrics( 1 ) / 2); 
+
+D3DRECT rec = { x - 10, y, x + 10, y + 1}; 
+D3DRECT rec2 = { x, y - 10, x + 1, y + 10}; 
+
+d3ddev->Clear(1, &rec, D3DCLEAR_TARGET, D3DCOLOR_ARGB(255, 255, 0, 0), 0, 0);
+d3ddev->Clear(1, &rec2, D3DCLEAR_TARGET, D3DCOLOR_ARGB(255, 255, 0, 0), 0, 0);
+
+//========================== Escribir texto ====================================
+
+LPD3DXFONT g_pFont;
+
+D3DXCreateFont( d3ddev, 15, 0, FW_MEDIUM, 1, 0 ,DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, PROOF_QUALITY, DEFAULT_PITCH | FF_SCRIPT, "Consolas", &g_pFont );
+RECT    rtFontPos = { 300, 400, 10, 10 };
+g_pFont->DrawText( NULL, "Dos de un Lindo Palo", -1, &rtFontPos, DT_LEFT | DT_NOCLIP, D3DCOLOR_XRGB( 255, 0, 0 ) );
+
+
+//========================== No Fog ====================================
+
+LPDIRECT3DDEVICE8 Device_Interface
+
+if(nofog) 
+{ 
+Device_Interface->SetRenderState(D3DRS_FOGENABLE, false); // Disable the Fog
+} 
+
+
+
+

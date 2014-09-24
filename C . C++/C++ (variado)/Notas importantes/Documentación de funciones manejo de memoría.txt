@@ -1,0 +1,158 @@
+Documentación de diferentes funciones :
+###############################################################################################
+
+CreateRemoteThread();  // Esta función creá un hilo dentro de un proceso.
+El typo para declarar la varibale que sostengá la función es "HANDLE" .  // La función se puede llamar sin identificador.
+                                                                                                                                                                                   Este es en caso que se quisiera mostrar un error al crear el thread.
+
+
+HANDLE  WINAPI CreateRemoteThread                                                                  HANDLE      HiloCreado    = CreateRemoteThread
+(                                                                                                                                                    (
+  HANDLE                                                    hProcess,                                                           proc,
+  LPSECURITY_ATTRIBUTES             lpThreadAttributes,                                     NULL,
+  SIZE_T                                                       dwStackSize,                                                    NULL, 
+  LPTHREAD_START_ROUTINE       lpStartAddress,                                               (LPTHREAD_START_ROUTINE)nLoadLibrary,
+  LPVOID                                                     lpParameter,                                                    (LPVOID)RemoteString, 
+  DWORD                                                     dwCreationFlags,                                           NULL, 
+  LPDWORD                                                lpThreadId                                                         NULL 
+);                                                                                                                                                    ); 
+
+hProcess                                  =             Es la variable o manejador devuelta por OpenProcess(), la cúal representará el hilo que crearemós en el proceso.
+lpThreadAttributes            =             Es la variable que determina la segurídad en el hilo, generalmente es NULL para que el programa tomé seguridad por defecto.
+dwStackSize                          =             Es la variabe que manejá el tamaño de la pila en el hilo, generalmente es NULL para que el programa definá el tamaño en tiempo de ejecución.
+LpStartAddress                   =             Es la dirección de memoría del proceso en donde se creará el hilo. (Donde empiezá a ejecutarse)
+LpParameter                        =             Son los parametros ( un puntero a una variable) que se le pasarán  a la función del thread.
+dwCreationFlags                =            Es la variablé que determina la forma de ejecución del hilo osea cómo se creará ( o cómo se lanzará el hilo),  Si se poné NULL será directamente.
+LpThreadId                           =            Es la variabe que guarda el ID del nuevo hilo creado. // Este parametro se puede omitir. o poner NULL también.
+
+Nota: 
+dwCreationFlags:   Se puede dejar en tres estados, los mas importantes, son en estado Pausado o Resumido o Directamente.
+
+CreateRemoteThread(BuscaminasHandle, 
+                                              NULL, 
+                                              NULL,
+                                              (LPTHREAD_START_ROUTINE)LoadLibraryAddress, 
+                                              (LPVOID)RemoteVirtualAddress,
+                                                0); 
+
+###############################################################################################################
+###############################################################################################################
+
+//FindWindow();
+
+Esta Función encuentra una ventana y la guarda en su manejador. 
+El typo para declarar la varibale que sostengá la función es "HWND" .  
+
+HWND FindWindow(                                                                           FindWindow(                   
+
+    LPCTSTR lpClassName,                                                                  NULL,
+    LPCTSTR lpWindowName                                                             "Nombre de la ventana")
+);                                                                                                                   );
+
+
+LpClassName                =          La clase de la ventana a encontrar.
+LpWindowsName       =         El nombre de la ventana a encontrar.  //Esta es la q se usa ya q usualemnte no se sabé la clase. :P
+
+###############################################################################################################
+###############################################################################################################
+
+//         WriteProccesMemory();
+Esta Función escribé algun valor en un espacio de memoría determinado.
+
+BOOL WriteProcessMemory   (                                                                                   WriteProcessMemory(
+  HANDLE hProcess,                                                                                                        process,
+  LPVOID lpBaseAddress,                                                                                             (LPVOID)0x0100579, 
+  LPCVOID lpBuffer,                                                                                                         &n, 
+  SIZE_T nSize,                                                                                                                   8,
+  SIZE_T* lpNumberOfBytesWritten                                                                        NULL
+);                                                                                                                                              );
+
+
+// Procces                                     =             Manejador del proceso que se optiené con openprocces.
+//                                                                      (siempre que se valla a trabajar en memoría se abré el proceso (duh!)
+
+// (LPVOID)0x100579c         =             Dirección de memoría que vamós a editar.
+//                                                                     Esta puedé estar almacenadá en una variable. (obio nuevamente!)
+
+// &n                                               =            Valor que se va a ingresar en la memoría
+//                                                                     Este valor es bueno que seá contante (const)
+
+// 8 || sizeof(&n)                        =             Ver cuántos bytes ocupa el nuevo valor.
+
+// NULL                                         =              En esta parte la función WPM verifíca el tamaño que ocupará el nuevo valor
+//                                                                       en la dirección de memoría.
+
+
+###############################################################################################################
+###############################################################################################################
+
+//GetWindowThreadProcessId();
+
+Esta función optiene el ID (identificador) del HLO  valiendose de el manejador de la ventana. 
+El typo para declarar la varibale que sostengá la función es "DWORD" .  
+
+DWORD GetWindowThreadProcessId(                                                  DWORD   pid      =          GetWindowsThreadProcessId(
+                                                                                                                                                                              (
+    HWND hWnd,                                                                                                                                               hWnd,
+    LPDWORD lpdwProcessId                                                                                                                     & pid)
+);                                                                                                                                                                            );
+
+hWnd                                  =                          Manejador de la ventana obtenido con findwindow();
+LpdwProcessId             =                           Variable en la que se guardara el ID del proceso.
+
+###############################################################################################################
+###############################################################################################################
+
+// OpenProcess();
+Permité el acceso a un proceso. DEVUELVE el ID del proceso.
+El typo para declarar la varibale que sostengá la función es "HANDLE" . 
+
+OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
+HANDLE WINAPI OpenProcess(                                                                                                        OpenProcess(
+  DWORD dwDesiredAccess,                                                                                                                 PROCESS_ALL_ACCESS,
+  BOOL bInheritHandle,                                                                                                                           false,                                                                                                                  
+  DWORD dwProcessId                                                                                                                            pid
+);                                                                                                                                                                       );
+
+dwDesireAcces           =                           Acceso que se le da al progama. 
+bInheritHandle           =                           Para saber si el handle es heredado por un proceso padre && Generalmente es false
+dwProcessId                =                          Aqui se pasa el ID del proceso por referencía.
+
+###############################################################################################################
+###############################################################################################################
+
+// VirtualAllocEx();
+Esta función crea un espacio de memoría determinado en un proceso que no sea el nuestro (externo);
+El typo para declarar la varibale que sostengá la función es "PVOID" . 
+
+VirtualAllocEx(BuscaminasHandle, NULL, strlen(DllPath), MEM_RESERVE|MEM_COMMIT, PAGE_READWRITE); 
+
+ LPVOID VirtualAllocEx(                                                                                          VirtualAllocEx(
+  HANDLE hProcess,                                                                                                                                     Buscaminas,
+  LPVOID lpAddress,                                                                                                                                     NULL,
+  SIZE_T dwSize,                                                                                                                                             Strlen(DLLPATH),
+  DWORD flAllocationType,                                                                                                                       MEM_RESERVE|MEM_COMMIT, 
+  DWORD flProtect                                                                                                                                         PAGE_READWRITE
+);                                                                                                                                                                          );
+
+hProcces                                       =                                       Manejador del proceso devueldo por openprocess();
+lpAddres                                       =                                       Espacio que se va a reservar o asignar la memoria, se coloca NULL para que lo decida la función.
+dwSize                                           =                                       Numero de bytes a asignar.
+flAllocationType                       =                                      Typo de asignación puede tomar tres valores:
+                                                                                                   MEM_COMMIT|MEM_RESERVE|MEM_RESET
+
+flProtect                                        =                                      Determina las operaciones( leer, escribir, ejecutar) disponibles en el sector de memoría asignado.
+                                                                                                   Toma estos valores:
+                                                                                                   PAGE_EXECUTE_READWRITE 
+                                                                                                   PAGE_READWRITE
+                                                                                                   PAGE_READ, 
+                                                                                                   PAGE_WRITE,
+                                                                                                   PAGE_NOACCESS, 
+                                                                                                   PAGE_EXECUTE
+
+
+
+
+
+
+

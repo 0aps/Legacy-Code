@@ -1,0 +1,15 @@
+Nombre del ejemplo: Lectura de teclado
+Nombre corto: teclas
+Licencia: GPL 2 (vea el archivo COPYING)
+Fecha: Mayo del 2005
+Autor: Hugo Ruscitti 
+Email: hugoruscitti@gmail.com
+Web: www.losersjuegos.com.ar
+
+Introducción:
+
+	Interpreta la pulsación de teclas y las imprime en pantalla.
+	
+Requiere:
+
+	* libSDL

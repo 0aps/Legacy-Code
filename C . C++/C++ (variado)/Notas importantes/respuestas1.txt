@@ -1,0 +1,46 @@
+Questions
+
+1. What is the iostream? 
+The iostream library is an object-oriented library that provides input and output functionality using streams.
+
+2. What the different between a short integer and a regular integer? 
+the numbers of bytes
+
+3. What is the data type to hold floating points? float or double
+
+4. What do the "\n" character do?  Newline
+5. What does the "\t" character do? Tabulation 
+5. #define identifier (what goes here)? replacement
+6. Whats the difference between = and == ?
+
+"==" (Equal to)       it's use to compare.
+"="  (Assignment) it's use to assign a value.
+
+7. What is the a way to increase a value?  value++;
+8. What is a way to decrease a value? value--;
+
+9. What does the standard input (cin) do?
+Get information from the user.
+
+10. Every program must contain a main function? True of False? true
+11. if (what goes here?) statement   || Condition
+12. Function with no type is is called (what?) Functions.  || void functions
+
+13. What does the return statement do in a main function?  
+the return statement causes the main function to finish. return may be followed by a return code
+
+14. What is a way to comment a line of code? // or /* blabla */
+15. How many byte(s) can a char hold? 1
+16. What is a way to declare a string? string variable;
+17. What does the standard input (cout) do? it's the standard output stream, basically printing text on screen
+
+18. What is the difference between a signed int and a unsigned int? 
+unsigned int can only store positive numbers and signed int  negative and positive numbers.
+19. using namespace std;
+
+What does declaring this do?
+
+If you specify using namespace std then you don't have to put std:: throughout your code. 
+The program will know to look in the std library to find the object. Namespace std contains all the classes, objects and functions of the standard C++ library.
+
+20. How many byte(s) can a double floating point hold? 8

@@ -1,0 +1,72 @@
+.386
+.model flat, stdcall
+option casemap: none
+ 
+OBJECT_ATTRIBUTES STRUCT
+	Len DWORD ?
+	RootDirectory DWORD ?
+	ObjectName	DWORD ?
+	Attributes DWORD ?
+	SecurityDescriptor DWORD ?
+	SecurityQualityOfService DWORD ?
+OBJECT_ATTRIBUTES ENDS
+ 
+UNICODE_STRING STRUCT
+	Len WORD ?
+	MaxLen WORD ?
+	Buffer DWORD ?
+UNICODE_STRING ENDS
+ 
+IO_STATUS_BLOCK STRUCT
+	Status DWORD ?
+	Information DWORD ?
+IO_STATUS_BLOCK ENDS
+ 
+.data
+hFile dd 0
+ob OBJECT_ATTRIBUTES <>
+;\??\i:\f.txt
+;12*2=24
+fileBuff db '\',0,'?',0,'?',0,'\',0,'i',0,':',0,'\',0,'f',0,'.',0,'t',0,'x',0,'t',0,0,0
+fName UNICODE_STRING <>
+isb IO_STATUS_BLOCK <>
+ 
+.code
+main:
+mov fName.Len, 24
+mov fName.MaxLen, 24
+mov fName.Buffer, offset fileBuff
+ 
+mov ob.Len, 018h
+mov ob.RootDirectory, 0
+mov ob.ObjectName, offset fName
+mov ob.Attributes, 00000040h
+mov ob.SecurityDescriptor, 0
+mov ob.SecurityQualityOfService, 0
+ 
+push 00000060h 
+push 00000005h
+push offset isb
+push offset ob
+push 00100020h
+push offset hFile
+call myZwOpenFile
+;en hFile tenes el HANDLE al archivo
+int 3
+mov eax, hFile
+;aca sin cerrar podes ver el archivo con el Process Explorer abierto
+ret
+ 
+myZwOpenFile:
+mov     eax,74h ;hardcodeado pero se puede leer del archivo al ser una funcion exportada
+call    SystemCallStub
+ret     2Ch
+ 
+SystemCallStub:
+mov     edx,esp
+;sysenter
+dw 340fh
+ret
+ 
+end main
+

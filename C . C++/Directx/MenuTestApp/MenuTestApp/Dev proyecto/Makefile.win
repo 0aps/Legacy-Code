@@ -1,0 +1,43 @@
+# Project: Project1
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 7.3 on 03/11/10 20:47
+
+WXLIBNAME = wxmsw28
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/Main.o Objects/MingW/cMenu.o Objects/MingW/cRender.o Objects/MingW/Drawing.o
+LINKOBJ   = "Objects/MingW/Main.o" "Objects/MingW/cMenu.o" "Objects/MingW/cRender.o" "Objects/MingW/Drawing.o"
+LIBS      = -L"C:/Archivos de programa/Dev-Cpp/Lib" -L"C:/Archivos de programa/Dev-Cpp/SDL-1.2.14/lib" -s -ld3d9 -ldxguid -ld3dx9 -lwinmm -lmingw32 -lSDLmain -lSDL -mwindows  
+INCS      = -I"C:/Archivos de programa/Dev-Cpp/Include"
+CXXINCS   = -I"C:/Archivos de programa/Dev-Cpp/lib/gcc/mingw32/3.4.5/include" -I"C:/Archivos de programa/Dev-Cpp/include/c++/3.4.5/backward" -I"C:/Archivos de programa/Dev-Cpp/include/c++/3.4.5/mingw32" -I"C:/Archivos de programa/Dev-Cpp/include/c++/3.4.5" -I"C:/Archivos de programa/Dev-Cpp/include" -I"C:/Archivos de programa/Dev-Cpp/" -I"C:/Archivos de programa/Dev-Cpp/include/3rdparty/wx/plotctrl" -I"C:/Archivos de programa/Dev-Cpp/include/3rdparty/wx/sheet" -I"C:/Archivos de programa/Dev-Cpp/include/3rdparty/wx/treemultictrl" -I"C:/Archivos de programa/Dev-Cpp/include/3rdparty/wx/things" -I"C:/Archivos de programa/Dev-Cpp/include/3rdparty/wx" -I"C:/Archivos de programa/Dev-Cpp/include/3rdparty" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/msw" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/generic" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/fl" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/gizmos" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/html" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/mmedia" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/net" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/ogl" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/plot" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/protocol" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/stc" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/svg" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/xml" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/xrc" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx" -I"C:/Archivos de programa/Dev-Cpp/include/common" -I"C:/Archivos de programa/Microsoft DirectX SDK (June 2010)/Include" -I"C:/Archivos de programa/Dev-Cpp/SDL-1.2.14/include"
+RCINCS    = --include-dir "C:/ARCHIV~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/Menu Aplicación D3D.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)   -lwsock32
+CFLAGS    = $(INCS) $(DEFINES)   -lwsock32
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(LINKOBJ) "$(BIN)"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/Main.o: $(GLOBALDEPS) ../Main.cpp ../Main.h ../Drawing.h ../cRender.h
+	$(CPP) -c ../Main.cpp -o Objects/MingW/Main.o $(CXXFLAGS)
+
+Objects/MingW/cMenu.o: $(GLOBALDEPS) ../cMenu.cpp ../cMenu.h ../cVars.h ../cRender.h ../Main.h
+	$(CPP) -c ../cMenu.cpp -o Objects/MingW/cMenu.o $(CXXFLAGS)
+
+Objects/MingW/cRender.o: $(GLOBALDEPS) ../cRender.cpp ../cRender.h ../Main.h
+	$(CPP) -c ../cRender.cpp -o Objects/MingW/cRender.o $(CXXFLAGS)
+
+Objects/MingW/Drawing.o: $(GLOBALDEPS) ../Drawing.cpp ../Drawing.h ../cRender.h ../Main.h ../cMenu.h ../cVars.h
+	$(CPP) -c ../Drawing.cpp -o Objects/MingW/Drawing.o $(CXXFLAGS)

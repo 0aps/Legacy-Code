@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1324164462 source:c:\documents and settings\owner\desktop\programming\c . c++\c++ (variado)\drivers\dispositivo\dispositivo\driver.c
+	<ddk/ntddk.h>
+

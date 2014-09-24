@@ -1,0 +1,147 @@
+WinMain es el punto de entra para nuestra aplicación, nosotros creamos y registramos la class de la ventana y luego creamos la ventana.
+Luego le recordamos a Windows que tiene que mostrar la ventana y luego nosotros creamos un bucle para recibir y despachar los mensajes hasta que
+la aplicación termina.
+
+
+int APIENTRY WinMain           (HINSTANCE hInstance, 
+                                HINSTANCE hPrevInstance, 
+                                LPSTR lpCmdLine, int nCmdShow)
+
+APIENTRY && WINAPI tienen la misma función.
+LPSTR = Long Pointer  To A String Y sería lo mismo que un char*.
+
+HINSTANCE = crea el manejo de la instancia.  -- La instancia es como la ventana en si el manejo de esta.
+(El primer paramento hInstance = La instancia principal)
+(El segundo parametro no tiene importancia en las ventanas modernas por esto siempre NULL)
+
+int nCmdShow = Es la bandera que describe como la ventana empezará.
+Ej: nCmdShow = SW_SHOWMAXIMIZED || SW_SHOWMINIMIZED.
+
+SW_SHOWMAXIMIZED  == La ventana se muestra maximizada.
+SW_SHOWMINIMIZED   == La ventana se muestra minimizada.
+
+###########################################################################################
+Variables utilizadas en la creación de la ventana.
+
+UINT                     typedeft unsigned int.
+ATOM            =        typedeft unsigned short;
+WORD            =        int de 16 bits (algo así :S)
+DWORD           =        Doble WORD y sería unsigned long;
+LPSTR           =        Long Pointer  To A String Y sería lo mismo que un char*.
+LPCSTR          =        Long Pointer To A Const String Y sería lo mismo que un const char*.
+LPVOID          =        Long Pointer to a Void y sería algo como void*.
+LRESULT         =        Long y CALLBACK  = _stdcal 
+wParam          =        Unsigned int
+lParam          =        Long 
+
+###########################################################################################
+En las definiciones de la estructura de la clase:
+
+WNDCLASSEX wincl;        /*Estructura de datos para la ventana */
+
+    /* La estructura de la ventana */
+
+    wincl.hInstance                             =                  hThisInstance;                                                                         // La instancia declarada en el procedimiento.
+    wincl.lpszClassName                         =                  szClassName;                                                                         // El nombre de la clase.
+    wincl.lpfnWndProc                           =                  WindowProcedure;                                                          // Aquí es donde se dice cual de las funciones es la que va a manejar los mensajes enviados a la ventana).
+    wincl.style                                 =                  CS_DBLCLKS|CS_HREDRAW|CS_VREDRAW;    //   El estilo de la ventana (bajamente xD)
+    wincl.cbSize                                =                  sizeof (WNDCLASSEX);                                               // El tamaño de la estructura (?)
+
+    /* Icono, Cursor, Menu, ect. . . */
+
+    wincl.hIcon                                 =                  LoadIcon (NULL, IDI_APPLICATION);     /Icono de la ventana                                                                                                                                                                
+    wincl.hIconSm                               =                  LoadIcon (NULL, IDI_APPLICATION);   /Icono Pequeño de la ventana
+    wincl.hCursor                               =                  LoadCursor (NULL, IDC_ARROW);         / Cambía el cursor. 
+    wincl.lpszMenuName                          =                  NULL;                                                                  /* El menu que se quiere desplegar */
+    wincl.cbClsExtra                            =                  0;                                                                       /* Parametros adicionales */
+    wincl.cbWndExtra                            =                  0;                                                                     /* Parametros adicionales */
+   
+
+ /* Color de la ventana */
+
+wcex.hbrBackground                              =                  (HBRUSH)(COLOR_WINDOW+1);           /COLOR_BACKGROUND/
+(Se cambia el color de la ventana) 
+(El + 1 lo pone más blanco, +2 = negro, etc . . .) (Si se pone en 0(cero)  windows no llena la ventana)
+
+Style:
+                         CS_DBLCLKS = Acepta doble clics.
+                         CS_HREDRAW = significa que queremos que nuestra ventana vuelva a dibujar cuando la anchura cambié.
+                         CS_CSVREDRAW significa que queremos que nuestra ventana vuelva a dibujar cuando la altura cambié.
+
+Tipos de cursores:
+			IDC_APPSTARTING
+			IDC_SIZEALL  IDC_SIZEALL
+			IDC_ARROW  IDC_ARROW
+			IDC_CROSS  IDC_CROSS
+			IDC_HAND  IDC_HAND
+			IDC_HELP  IDC_HELP
+			IDC_IBEAM  IDC_IBEAM
+			IDC_NO  IDC_NO
+			IDC_SIZENESW  IDC_SIZENESW
+			IDC_SIZENS  IDC_SIZENS
+			IDC_SIZESWSE  IDC_SIZENWSE
+			IDC_SIZEWE  IDC_SIZEWE
+			IDC_UPARROW  IDC_UPARROW
+			IDC_SIZEWE  IDC_SIZEWE
+
+
+###########################################################################################
+Creación de la ventana:
+                  ________________________________________________________________________________________
+CreateWindow    =|                                                                                                                                                                                    |
+                 | Estas dos son tienen la misma función pero la segunda tiene los estilos más extendidos |                                                                            
+CreateWindowEX  =|_______________________________ _______________________________________________________ |
+                                          
+HINSTANCE        = El manejo de la instancia.
+ HWND            = El manejo de la ventana hacia la instancia.
+
+
+HWND CreateWindow( LPCTSTR lpClassName,                    HWND hWnd = CreateWindow(MyWindowClass, 
+                   LPCTSTR lpWindowName,                                           "The title of the Window",       
+                   DWORD style,                                                    WS_OVERLAPPEDWINDOW,                                            
+                   int x, int y, int width, int height,                            CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,                
+                   HWND hWndParent,                                                NULL,
+                   HMENU hMenu,                                                    NULL, 
+                   HANDLE hInstance,                                               hInstance, 
+                   LPVOID lpParam);                                                NULL);
+
+LpClassName          =                   El nombre de la clase que definimós.
+LpWinwosName         =                   El nombre de la ventana.
+Style                =                   El estilo que se le puede dar a la ventana. (EJ: bordes, barras de desplazamiento, etc. . . )
+X, Y                 =                   Las posiciones Verticales y horizontales para mostrarse la ventana.
+With, Height         =                   La altura y la anchura de la ventana al momento de crearse.
+Hmenu                =                   Usar menus definidos en un archivo de recursos previamente. 
+hIntance             =                    La instancia de la ventana definida anteriormente.
+LpRaram              =                    Este es un puntero de cualquier cosa que se quiera pasar al procedimiento de la ventana, normalmente es NULL.
+
+DWORD style:
+
+                                                                  WS_OVERLAPPEDWINDOW
+                                                                  WS_BORDER
+                                                                  WS_CAPTION
+                                                                  WS_DISABLED
+                                                                  WS_HSCROLL
+                                                                  WS_TABSTOP
+                                                                  WS_VSCROLL
+
+
+
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                              
+
+
+
+
+
+
+
+
+
+
+
+

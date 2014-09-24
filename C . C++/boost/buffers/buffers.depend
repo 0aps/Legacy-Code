@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1396556984 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\buffers\main.cpp
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+	<boost/enable_shared_from_this.hpp>
+	<boost/shared_ptr.hpp>
+	<iostream>
+	<vector>
+

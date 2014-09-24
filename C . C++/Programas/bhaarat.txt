@@ -1,0 +1,31 @@
+1. AssameseAsomiya
+2. BengaliBangla
+3. Bodo
+4. Dogri
+5. Gujarati
+6. Hindi
+7. Kannada
+8. Kashmiri
+9. Konkani
+10. Maithili
+11. Malayalam
+12. Manipuri
+13. Marathi
+14. Nepali
+15. Oriya
+16. Punjabi
+17. Sanskrit
+18. Santhali
+19. Sindhi
+20. Tamil
+21. Telugu
+22. Urdu23
+23. English
+
+23. English
+
+23. English
+
+23. English
+
+23. English

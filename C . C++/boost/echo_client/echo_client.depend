@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1396611715 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\echo_client\main.cpp
+	<cstdlib>
+	<cstring>
+	<iostream>
+	<boost/asio.hpp>
+

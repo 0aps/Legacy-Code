@@ -1,0 +1,33 @@
+#include <windows.h>
+ 
+ 
+ICONO ICON MOVEABLE PURE LOADONCALL DISCARDABLE "icono.ico"
+APS   BITMAP "bitmap.bmp"
+ 
+1 VERSIONINFO
+FILEVERSION 0,0,0,0
+PRODUCTVERSION 0,0,0,0
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "3C0A04E4"
+		 {
+			 VALUE "CompanyName", "DlD"
+			 VALUE "FileVersion", ""
+			 VALUE "FileDescription", "Developed by DlD"
+			 VALUE "InternalName", ""
+			 VALUE "LegalCopyright", "dld-x@hotmail.com"
+			 VALUE "LegalTrademarks", ""
+			 VALUE "OriginalFilename", "  .exe "
+			 VALUE "ProductName", "     "
+			 VALUE "ProductVersion", ""
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x3C0A, 1252
+	 }
+}
+ 
+ 

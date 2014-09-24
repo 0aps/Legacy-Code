@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1396566843 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\logger_basic\logger_service.cpp
+	"logger_service.hpp"
+
+1396566875 c:\documents and settings\owner\desktop\programming\c . c++\boost\logger_basic\logger_service.hpp
+	<boost/asio.hpp>
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/noncopyable.hpp>
+	<boost/scoped_ptr.hpp>
+	<fstream>
+	<sstream>
+	<string>
+
+1396566941 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\logger_basic\main.cpp
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+	<iostream>
+	"logger.hpp"
+	"stream_socket_service.hpp"
+
+1396566814 c:\documents and settings\owner\desktop\programming\c . c++\boost\logger_basic\logger.hpp
+	"basic_logger.hpp"
+	"logger_service.hpp"
+
+1396566771 c:\documents and settings\owner\desktop\programming\c . c++\boost\logger_basic\basic_logger.hpp
+	<boost/asio.hpp>
+	<boost/noncopyable.hpp>
+	<string>
+
+1396566917 c:\documents and settings\owner\desktop\programming\c . c++\boost\logger_basic\stream_socket_service.hpp
+	<boost/asio.hpp>
+	<boost/noncopyable.hpp>
+	<boost/lexical_cast.hpp>
+	"logger.hpp"
+

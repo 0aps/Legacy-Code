@@ -1,0 +1,733 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<windows.h>
+void cuadro(void)
+{
+int y,i;
+textcolor(9);
+gotoxy(24,3);cprintf("-----------------------------------");
+gotoxy(24,5);cprintf("-----------------------------------");
+gotoxy(24,7);cprintf("-----------------------------------");
+textcolor(12);
+gotoxy(24,9);cprintf("-----------------------------------");
+textcolor(9);
+gotoxy(24,11);cprintf("-----------------------------------");
+gotoxy(24,13);cprintf("-----------------------------------");
+textcolor(12);
+gotoxy(24,15);cprintf("-----------------------------------");
+textcolor(9);
+gotoxy(24,17);cprintf("-----------------------------------");
+gotoxy(24,19);cprintf("-----------------------------------");
+gotoxy(24,21);cprintf("-----------------------------------");
+y=4;
+for(i=0;i<17;i++)
+	{
+   textcolor(9);
+   gotoxy(23,y);cprintf("|");
+   gotoxy(27,y);cprintf("|");
+   gotoxy(31,y);cprintf("|");
+   textcolor(12);
+   gotoxy(35,y);cprintf("|");
+   textcolor(9);
+   gotoxy(39,y);cprintf("|");
+   gotoxy(43,y);cprintf("|");
+   textcolor(12);
+   gotoxy(47,y);cprintf("|");
+   textcolor(9);
+   gotoxy(51,y);cprintf("|");
+   gotoxy(55,y);cprintf("|");
+   gotoxy(59,y);cprintf("|");
+   y++;
+   }
+}
+void sudoku(void)
+{
+int a[9][9],i,b,f,z,u,t,c,x,y,k,d,g=0,j,v[81],q,m,n,w,l[9][9],l1,l2,lc,ld,s,con;
+char h,e,di;
+randomize();
+while(g==0)
+{
+s=1;
+clrscr();
+textcolor(12);
+gotoxy(37,12);cprintf("SUDOKU");
+textcolor(9);
+gotoxy(25,14);cprintf("-Presiona enter para comenzar");
+gotoxy(25,16);cprintf("-Presiona esc para salir");
+while(s==1)
+	{
+   di=getch();
+   if(di==char(13))
+   	{
+      s=0;
+      }
+   if(di==char(27))
+   	{
+      s=2;g=2;
+      }
+   if(di!=char(13)&&di!=char(27))
+   	{
+      s=1;
+      }
+   }
+clrscr();
+if(s!=2)
+{
+textcolor(12);
+gotoxy(34,3);cprintf("INSTRUCCIONES");
+printf("\n\n1- Con las flechas mueves el cursor\n2- Para borrar un numero solo sobrescribelo\n3- No puede haber un numero repetido en la misma fila\n4- No puede haber un numero repetido en la misma columna\n5- No puede haber un numero repetido en el mismo rango\n6- Los numeros cafes no pueden ser alterados\n7- Los numeros verdes son los numeros disponibles\n8- Los numeros rojos indican que ese numero esta repetido");
+textcolor(9);
+gotoxy(21,16);cprintf("-Presiona cualquier tecla para comenzar");
+getch();
+}
+while(s==0)
+{
+q=0;w=0;m=57;n=20;l1=8;l2=8;
+clrscr();
+gotoxy(30,12);printf("CARGANDO EL SUDOKU...");
+y=2;x=25;
+for(i=0;i<9;i++)     //for para llenar la matriz
+	{
+   Sleep(100);
+   x=25;
+   y+=2;
+   for(b=0;b<9;b++)      //for para llenar la matriz
+   	{
+      	c=random(10);
+      		while(c==0)         //para que random no salga 0
+      			{
+         			c=random(10);
+         		}
+      				a[i][b]=c;
+    for(k=0;k<9;k++)
+    {
+      	for(f=0;f<b;f++)           //identificador para no repetir numeros en las filas
+      		{
+      		if(a[i][f]==a[i][b])
+      			{
+      				c=random(10);
+                  f=700;
+                  k=-1;
+
+      					while(c==0)          //para que random no salga 0
+      						{
+         						c=random(10);
+         					}
+	     							a[i][b]=c;
+      			}
+            }
+         for(z=0;z<i;z++)        //identificador para no repetir numeros en las columnas
+           	{
+            if(a[z][b]==a[i][b])
+         		{
+            		c=random(10);
+                  z=700;
+                  k=-1;
+      					while(c==0)                  //para que random no salga 0
+      						{
+         						c=random(10);
+         					}
+	     							a[i][b]=c;
+        			}
+            }
+         for(u=0;u<3&&i<3;u++)
+         	{
+               for(t=0;t<3&&b<3;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+            }
+         for(u=0;u<3&&i<3;u++)
+         	{
+               for(t=3;t<6&&b>2&&b<6;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=0;u<3&&i<3;u++)
+         	{
+               for(t=6;t<9&&b>5&&b<9;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=3;u<6&&i>2&&i<6;u++)
+         	{
+               for(t=0;t<3&&b<3;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=3;u<6&&i>2&&i<6;u++)
+         	{
+               for(t=3;t<6&&b>2&&b<6;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=3;u<6&&i>2&&i<6;u++)
+         	{
+               for(t=6;t<9&&b>5&&b<9;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=6;u<9&&i>5&&i<9;u++)
+         	{
+               for(t=0;t<3&&b<3;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=6;u<9&&i>5&&i<9;u++)
+         	{
+               for(t=3;t<6&&b>2&&b<6;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+         for(u=6;u<9&&i>5&&i<9;u++)
+         	{
+               for(t=6;t<9&&b>5&&b<9;t++)
+               	{
+                  	if(u==i&&t==b)
+                        	{
+                           t=100;
+                           u=100;
+                           }
+                    if(a[i][b]==a[u][t])
+                     	{
+                        	c=random(10);
+                           t=700;
+                           u=700;
+                           k=-1;
+                           while(c==0)
+                           	{
+                              c=random(10);
+                              }
+             					a[i][b]=c;
+                        }
+                  }
+               }
+      if(f==701&&z==701)
+      {
+      k=700;b=-1;x=25;
+      }
+    }
+    	if(b!=-1)
+      {
+      //gotoxy(x,y);printf("%i",a[i][b]);
+      x+=4;
+      }
+      w++;
+   	if(w==200000)
+   		{
+         y=2;i=-1;k=700;b=100;w=0;
+         }
+      }
+    if(w==200000)
+   		{
+         y=2;i=-1;k=700;b=100;w=0;
+         }
+   }
+if(a[8][8]==1||a[8][8]==2||a[8][8]==3||a[8][8]==4||a[8][8]==5||a[8][8]==6||a[8][8]==7||a[8][8]==8||a[8][8]==9)
+{
+clrscr();
+cuadro();
+y=2;x=25;j=0;
+for(i=0;i<9;i++)
+	{
+   x=25;
+   y+=2;
+   for(b=0;b<9;b++)
+   	{
+      d=random(3);
+      v[j]=d;
+      if(d==1)
+      	{
+         textcolor(6);
+         gotoxy(x,y);cprintf("%i",a[i][b]);
+         }
+         x+=4;j++;
+      }
+   }
+j=0;con=0;
+for(i=0;i<9;i++)
+	{
+   for(b=0;b<9;b++)
+   	{
+      if(v[j]==1)
+      	{
+         con++;
+         l[i][b]=a[i][b];
+         }
+      if(v[j]!=1)
+      	{
+         l[i][b]=0;
+         }
+         j++;
+      }
+   }
+}
+if(con<=27)
+	{
+   textcolor(12);
+   gotoxy(35,2);cprintf("Nivel dificil");
+   }
+if(con>=28&&con<=33)
+	{
+   textcolor(13);
+   gotoxy(36,2);cprintf("Nivel medio");
+   }
+if(con>=34)
+	{
+   textcolor(14);
+   gotoxy(36,2);cprintf("Nivel facil");
+   }
+gotoxy(1,23);printf("-Presiona f1 para otro sudoku");
+gotoxy(1,24);printf("-Presiona f2 para mostrar la solucion");
+gotoxy(57,20);
+while(q==0)
+	{
+   while(kbhit())
+   	{
+      if(m<=4||m>=76||n<=3||n>=22)
+			{
+   			m=57;n=20;l1=8;l2=8;
+   		}
+      h=getch();
+      if(h==char(75))//izquierda
+      	{
+         m-=4;l2--;
+         gotoxy(m,n);
+         }
+      if(h==char(77))//derecha
+      	{
+         m+=4;l2++;
+         gotoxy(m,n);
+         }
+      if(h==char(72))//arriba
+      	{
+         n-=2;l1--;
+         gotoxy(m,n);
+         }
+      if(h==char(80))//abajo
+      	{
+         n+=2;l1++;
+         gotoxy(m,n);
+         }
+   	if(h==char(59))
+      	{
+         q=2;
+         }
+      if(h==char(60))
+      	{
+         q=1;
+         }
+      /*gotoxy(1,1);printf("l1 %i",l1);
+      gotoxy(1,2);printf("l2 %i",l2);
+      gotoxy(1,3);printf("l %i",l[l1][l2]);
+      gotoxy(1,4);printf("%i",l[l1][l2]);
+      gotoxy(m,n);*/
+y=2;j=0;
+for(i=0;i<9;i++)
+	{
+   x=25;
+   y+=2;
+   	for(b=0;b<9;b++)
+      	{
+         if(v[j]==1)
+         {
+         textcolor(6);
+         gotoxy(x,y);cprintf("%i",a[i][b]);
+         }
+         x+=4;j++;
+         }
+   }
+gotoxy(m,n);
+}
+if(q==0)
+	{
+while(!kbhit())
+	{
+   	e=getch();gotoxy(m,n);
+      if(e==49||e==50||e==51||e==52||e==53||e==54||e==55||e==56||e==57)
+      {
+      ld=1;
+      for(lc=49;lc<60;lc++)
+      	{
+         	if(e==lc)
+            	{
+               l[l1][l2]=ld;
+               }
+         ld++;
+         }
+      for(f=0;f<9;f++)
+      	{
+         	if(f!=l2)
+            	{
+                  if(l[l1][f]!=l[l1][l2])
+                  {
+               	textcolor(10);
+               	gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                  }
+                  if(l[l1][f]==l[l1][l2])
+                  {
+               	textcolor(12);
+                  f=100;
+               	gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                  }
+
+               }
+         }
+      for(z=0;z<9;z++)
+      	{
+         	if(f==101)
+            	{
+               z=100;
+               }
+         	if(z!=l1&&z!=100)
+            	{
+               	if(l[z][l2]!=l[l1][l2])
+                  {
+               	textcolor(10);
+               	gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                  }
+                  if(l[z][l2]==l[l1][l2])
+                  {
+               	textcolor(12);
+                  z=100;
+               	gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                  }
+               }
+         }
+      for(u=0;u<3&&l1<3;u++)
+         	{
+               for(t=0;t<3&&l2<3;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=0;u<3&&l1<3;u++)
+         	{
+               for(t=3;t<6&&l2>2&&l2<6;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=0;u<3&&l1<3;u++)
+         	{
+               for(t=6;t<9&&l2>5&&l2<9;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=3;u<6&&l1>2&&l1<6;u++)
+         	{
+               for(t=0;t<3&&l2<3;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=3;u<6&&l1>2&&l1<6;u++)
+         	{
+               for(t=3;t<6&&l2>2&&l2<6;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=3;u<6&&l1>2&&l1<6;u++)
+         	{
+               for(t=6;t<9&&l2>5&&l2<9;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=6;u<9&&l1>5&&l1<9;u++)
+         	{
+               for(t=0;t<3&&l2<3;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=6;u<9&&l1>5&&l1<9;u++)
+         	{
+               for(t=3;t<6&&l2>2&&l2<6;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      for(u=6;u<9&&l1>5&&l1<9;u++)
+         	{
+               for(t=6;t<9&&l2>5&&l2<9;t++)
+               	{
+                  	if(u!=l1||t!=l2)
+                     {
+                    if(l[l1][l2]==l[u][t])
+                     	{
+                        textcolor(12);
+                  		t=100;u=100;
+               			gotoxy(m,n);cprintf("%i",l[l1][l2]);
+                        }
+                    	}
+                  }
+            }
+      }
+   }
+   }
+}
+clrscr();
+cuadro();
+y=2;j=0;
+for(i=0;i<9;i++)
+	{
+   x=25;
+   y+=2;
+   	for(b=0;b<9;b++)
+      	{
+         if(v[j]==1)
+         {
+         textcolor(6);
+         gotoxy(x,y);cprintf("%i",a[i][b]);
+         }
+         x+=4;j++;
+         }
+   }
+y=2;x=25;j=0;
+if(q==2)
+{
+s=0;
+}
+if(q!=2)
+{
+q=0;
+}
+for(i=0;i<9;i++)
+	{
+   x=25;
+   y+=2;
+   for(b=0;b<9;b++)
+   	{
+      if(v[j]!=1)
+      	{
+         gotoxy(x,y);printf("%i",a[i][b]);
+         }
+         x+=4;j++;
+      }
+   }
+gotoxy(5,23);printf("-Presiona enter para volver al menu principal");
+gotoxy(5,24);printf("-Presiona esc para salir");
+while(q==0)
+	{
+   h=getch();
+   if(h==char(13))
+   	{
+      g=0;
+      q=1;
+      s=1;
+      }
+   else
+   	{
+      q=0;
+      }
+   if(h==char(27))
+   	{
+      s=3;g=1;q=1;
+      }
+   }
+}
+}
+}

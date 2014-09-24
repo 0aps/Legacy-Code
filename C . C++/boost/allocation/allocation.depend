@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1396556903 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\allocation\main.cpp
+	<cstdlib>
+	<iostream>
+	<boost/aligned_storage.hpp>
+	<boost/array.hpp>
+	<boost/bind.hpp>
+	<boost/enable_shared_from_this.hpp>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/asio.hpp>
+

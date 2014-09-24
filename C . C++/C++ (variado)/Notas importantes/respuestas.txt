@@ -1,0 +1,157 @@
+1. enum DXT {yes, yo = 16, cool, sweet, fast = 20, awesome, peep = 34, leet = 36};
+
+What is the value of sweet?
+18
+
+2. int dxt = 1337;
+
+int *pntr = &dxt;
+
+What is the value of *pntr?
+1337
+
+3. What does the "|" do in this situation (786 | 560) - Explain and Answer
+
+it compare the bits one to one.
+if the above is equal to the number below the number down
+if they dont match. it lowers the larger number
+
+e.g:
+int b= 786|560 = 818
+
+4. What does the "NOT" do in this situation (450)? - Expalain and Answer in Binary
+it is an unitary operator that reverses the value of each bit.
+
+450 in binary is equal to 00000000000111000010 
+so ill be  11111111111000111101 .
+
+5. [1] int main () {
+
+[2] int num = 50;
+
+[3] cout << num << endl;
+[4] return;
+
+}
+
+Which line contains an incorrect command?   
+4 
+
+
+6. What do you need to include to read & write to files?
+
+C = stdio.h
+C++ = fstream 
+
+7. How many bytes in a WORD?
+2 bytes
+ 
+8. How many bytes in a FLOAT? 
+4 bytes
+
+9. What is a way to request dynamic memory? 
+To request dynamic memory we use the operator "new"
+
+10. What is the difference between "==" and "="?
+
+"==" (Equal to)       it's use to compare.
+"="  (Assignment) it's use to assign a value.
+
+11. What keyword allows the definition of our own types based on existing data types?  
+ typedef
+
+12. What does the operator (!) stand for?
+Is the operator NOT , and the only thing that it does is to inverse the value. 
+
+13. What does the special character "\a" do?
+It produce a sound, a bip.
+
+14. What does the conditional operator "?" do? 
+The conditional operator evaluates an expression returning a value if that expression is true and a different one if the expression is  false. 
+
+15. What does the "<<" bitwise operator do?
+       Simply moving the bits to the left.
+
+16. Create a class with a minimum of two 3 data members with private access, and 2 function mentions with public access.. and then implement it in a simple program that uses both the data members and the function members.
+
+#include <iostream>
+
+using namespace std;
+
+class persona
+{
+    private:
+        char *a_nombre;
+        int a_edad;
+        int bh;
+    public:
+        void SetNombre(char *nombre)
+        {
+            a_nombre=nombre;
+        }
+        void SetEdad(int edad)
+        {
+            a_edad=edad;
+        }
+        void setbh(int bh1)
+        {
+            bh=bh1;
+        }
+        int  getbh()
+        {
+            return bh;
+        }
+        char* GetNombre()
+        {
+            return a_nombre;
+        }
+        int GetEdad()
+        {
+            return a_edad;
+        }   
+    };
+
+int main()
+{
+    persona pj;
+    char nombre[40];
+    int bh;
+    int edad;
+    
+    cout<<"Name: ";
+    cin.getline(nombre, 40);
+    
+    cout<<endl<<"Age: ";
+    cin>>edad;
+    
+    cout<<endl<<"Year born: ";
+    cin >> bh;
+    
+    pj.SetNombre(nombre);
+    pj.SetEdad(edad);
+    pj.setbh(bh);
+    
+    cout<<endl<<"Your name is "<<pj.GetNombre()<<" and you have "<<pj.GetEdad()<<" years old.";
+    cout<< "\nYou borned in: " << pj.getbh();
+    
+    setbuf(stdin, NULL);
+    cin.get();
+    return 0;
+}
+
+
+
+
+17. A for loop contains an ( initialization; [what goes here?]; increase):
+Condition.
+
+18. What do the statement "->" do?
+This is for access to a member of a struct  referenced to a pointer.
+
+19. Why doesn't a #define need a ";" after its end?
+No semicolon (;) is expected at the end of a preprocessor directive.
+
+20. Void has a type? True or False?
+False
+it's used where a type name is expected, to indicate that a function does not return any value at all. 
+

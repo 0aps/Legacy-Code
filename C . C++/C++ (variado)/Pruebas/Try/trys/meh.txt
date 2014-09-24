@@ -1,0 +1,24 @@
+falar (to talk)
+eu        falo
+tu        falas
+ele/ela   fala
+n£s       falamos
+v£s       falais
+eles/alas falam
+
+partir (to left)
+eu        parto
+tu        partes
+ele/ela   parte
+n£s       partimos
+v£s       partis
+eles/alas partem
+
+amar (to love)
+eu        amo
+tu        amas
+ele/ela   ama
+n£s       amamos
+v£s       amais
+eles/alas amam
+

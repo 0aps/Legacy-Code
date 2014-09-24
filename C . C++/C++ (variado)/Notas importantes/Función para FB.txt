@@ -1,0 +1,5 @@
+	javascript:document.body.style.backgroundImage='url(http://www.argentinas.biz/wp-content/uploads/2008/08/anabel-cherubito-1.jpg)';void(0);
+
+
+
+javascript:(function(){CSS.removeClass(document.body,%20'profile_two_columns');tab_controller.changePage("photos");})()

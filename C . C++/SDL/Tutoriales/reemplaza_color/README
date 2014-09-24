@@ -1,0 +1,20 @@
+Nombre del ejemplo: Reemplazar un color
+Nombre corto: reemplaza_color
+Licencia: GPL 2 (vea el archivo COPYING)
+Fecha: Marzo del 2006
+Autor: Hugo Ruscitti 
+Email: hugoruscitti@gmail.com
+Web: www.losersjuegos.com.ar
+
+Introducción:
+
+	Reemplaza todas las ocurrencias de un color por otro.
+	
+	El ejemplo muestra 2 imágenes, la imagen original (sin cambios de
+	color) y una versión alterada donde se reemplaza un color por otro.
+
+Requiere:
+
+	* libSDL
+	* libSDL_image
+

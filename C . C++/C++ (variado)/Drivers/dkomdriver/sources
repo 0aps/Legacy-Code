@@ -1,0 +1,7 @@
+TARGETNAME=dkomdriver
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+
+INCLUDES=$(BASEDIR)\inc
+
+SOURCES = dkomdriver.c

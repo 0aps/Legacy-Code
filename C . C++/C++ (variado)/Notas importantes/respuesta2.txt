@@ -1,0 +1,73 @@
+Questions
+1. C++ is case sensitive? True of False
+True
+
+2. All elements of the standard C++ library are declared in what is called
+a ____space?
+std namespace.
+
+3. What symbol is used to seperate different statements in C++
+____colon?
+SemiColon
+
+4. If we dont add a , return (number), in a main () function, what will occur?
+If the main is declared void nothig should happend nontheless if the main is declared int
+the compilator won't let you compile, becouse main must return int.
+
+5. Why is 0 put after return, usually in a main () function?
+To indicate the program worked as expected without any errors during its execution. 
+ 
+6. A double usually takes __ bytes in computer memory?
+8 bytes
+
+7. What is the difference between a CHAR [] and a string?
+char [] is a sequence (array)  of chars in memory that must end with the "\0".
+string type is a "smart" or "class", which has operations and functions that affect the object referred to, such as to determine the length, to reverse the string, etc.. 
+When using objects of type string, they grow as needed, without you having to worry about booking another memory space, copy the items, and assign the new address pointer memory.
+
+8. What are the two ways to declare a constant?
+
+Defined constants (#define PI 3.14159)
+Declared constants  (const int pathwidth = 100;)
+
+9. What does this operators mean (!=) ?
+Not equal to
+
+10. What does this operator mean (>=) ?
+Greater than or equal to
+
+11. What does the operater [sizeof()] do?
+sizeof operator reports the size of storage used by any object, either a basic type or derivative.
+
+12. cin (usually) input what from the users?
+Information from the user.
+
+13. What does cin.get() do?
+Capture all your data including white-space characters.
+It's usually use to produce a stop in the program.
+
+14. What does cin.getline(x,x) do?
+
+The getline member function is similar to the get function.
+Both functions reserve one character for the required terminating character. 
+However, get leaves the terminating character in the stream and getline removes the terminating character. 
+
+15. What is included to OUPUT information to a file?
+the library ofstream
+
+16. the "break" statement does what in a loop?
+it ends the loop and keep with the program flow
+
+17. Here is the basic structure for a function, insert the missing data:
+
+type name (what goes here?, and here?) {statements}
+type name ( parameter1, parameter2) 
+
+18. What does the keyword (VOID) mean when used as a function return type?
+it means nothing it just for indicate that the function does not return any value at all. 
+
+19. Null usually = 0 in C++? True or False? 
+True
+
+20. What does the (++) operator do? 
+It's the way to increase a value.

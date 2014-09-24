@@ -1,0 +1,33 @@
+#include <windows.h>
+ 
+ 
+ICONO ICON MOVEABLE PURE LOADONCALL DISCARDABLE "icono.ico"
+ 
+ 
+1 VERSIONINFO
+FILEVERSION 0,0,0,0
+PRODUCTVERSION 0,0,0,0
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "3C0A04E4"
+		 {
+			 VALUE "CompanyName", "Avoidance25"
+			 VALUE "FileVersion", ""
+			 VALUE "FileDescription", "Developed by Avoidance25"
+			 VALUE "InternalName", ""
+			 VALUE "LegalCopyright", "toni_ebs@hotmail.de"
+			 VALUE "LegalTrademarks", ""
+			 VALUE "OriginalFilename", "CTecla2.exe"
+			 VALUE "ProductName", "CTecla2"
+			 VALUE "ProductVersion", ""
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x3C0A, 1252
+	 }
+}
+ 
+ 

@@ -1,0 +1,1073 @@
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 0
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+error, no se puede acceder al cuadro 2293224
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 640
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 0
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 80
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 320
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 400
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 480
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 560
+Posicion Y: 96
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 160
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0
+Ancho de cada cuadro: 80
+Alto de cada cuadro: 96
+Posicion X: 240
+Posicion Y: 0

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1396625183 source:c:\documents and settings\owner\desktop\programming\c . c++\boost\echo\main.cpp
+	<cstdlib>
+	<iostream>
+	<boost/bind.hpp>
+	<boost/asio.hpp>
+

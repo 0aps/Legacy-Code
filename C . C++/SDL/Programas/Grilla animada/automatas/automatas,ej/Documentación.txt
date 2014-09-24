@@ -1,0 +1,51 @@
+Autómatas
+
+
+actor_inicia(&actor)
+{
+
+ -Se carga la grilla a la estructura
+ -Se definen las otras variables de la estructura incluyendo las posiciones x,y
+ -Se asocia cada cuadro de la grilla a una matriz basándose en su estado
+  {
+	void actor_cargar_animacion (struct actor * obj, enum estado estado, char * cuadros)
+
+         {
+		se llena la matriz (obj->animaciones[estado][i]), donde: 	
+		" i ", representa cada cuadro de la grilla que describe el estado del personaje
+	 
+	 	obj->animaciones[INICIA][0] = 37; //cuadro 37
+		obj->animaciones[PARADO][1] = 0;  //cuadro 0
+
+	 }
+  }
+
+}
+
+
+void actor_actualizar (struct actor * obj)
+{
+ -Partiendo del estado en el cual está la estructura "obj" se procede a realizar su función correspondiente
+  
+  	actor_estado_inicia (obj, key)
+		{
+	 	 -Se avanza un cuadro en la grilla basándose en el estado actual
+		  si se ha llegado al final del estado 
+		  se selecciona el primer cuadro del estado 
+	
+  			void actor_cambiar_estado (struct actor * obj, enum estado estado)
+				{
+					se cambia el estado actual al pasado por la variable "estado"
+					en este caso siendo llamada la función desde actor_estado_inicia 
+					pasa a "parado" el estado
+					
+					-Se imprime el nuevo estado en la barra de título			
+
+				}
+
+}
+
+-- Se imprime el estado en la superficie virtual
+   Se imprime en pantalla
+   Se actualiza la pantalla
+  		

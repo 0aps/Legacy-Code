@@ -1,0 +1,2 @@
+
+void *cargar(char* c);
